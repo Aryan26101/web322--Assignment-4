@@ -1,0 +1,17 @@
+body {
+	--bs-body-bg: #212121;
+	--bs-body-color: #fff;
+	--bs-nav-link-color: #fff;
+	--bs-emphasis-color-rgb: #fff;
+	--bs-tertiary-bg: #2f2d2d;
+    --bs-tertiary-bg-rgb: 47, 45, 45;
+	--bs-tooltip-bg: #5543d8 !important;
+    --bs-tooltip-color: #fff !important;
+    --bs-form-control-bg: #2f2d2d;
+}
+.tooltip .tooltip-inner {
+	background-color: #0d6efd;
+}
+.tooltip .tooltip-arrow::before {
+   opacity: 0;
+}

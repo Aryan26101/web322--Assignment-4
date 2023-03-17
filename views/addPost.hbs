@@ -1,0 +1,84 @@
+<div class='row mt-5'>
+	<div class='col-md-12'>
+		<h2 class="text-center"><b>Add Post</b></h2>
+		<form method='post' action='/posts/add' enctype='multipart/form-data'>
+			<fieldset>
+				<h3>Feature Image</h3>
+				
+				
+				<div class='row'>
+					<div class='col-md-12'>
+						<div class='form-group'>
+							<input
+								class='form-control'
+								id='featureImage'
+								name='featureImage'
+								type='file'
+							/>
+						</div>
+					</div>
+				</div>
+			</fieldset>
+
+			<fieldset class="mt-3">
+				<h3>Post Content</h3>
+				
+				<div class='row'>
+					<div class='col-md-12'>
+						<div class='form-group'>
+							<label for='title'>Title:</label>
+							<input class='form-control mt-1' id='title' name='title' type='text' />
+						</div>
+					</div>
+				</div>
+				<div class='row mt-2'>
+					<div class='col-md-12'>
+						<div class='form-group'>
+							<label for='body'>Body:</label>
+							<textarea
+								class='form-control mt-1'
+								id='body'
+								name='body'
+								rows='15'
+
+							></textarea>
+						</div>
+					</div>
+				</div>
+				<div class='row mt-2'>
+					<div class='col-md-6'>
+						<div class='form-group'>
+							<label for='category '>Category:</label>
+							<select class='form-control mt-1' name='category' id='category'>
+								<option value='1'>Technology</option>
+								<option value='2'>Gaming</option>
+								<option value='3'>Fashion</option>
+								<option value='4'>Education</option>
+								<option value='5'>Wellness</option>
+							</select>
+						</div>
+					</div>
+					<div class='col-md-6'>
+						<div class='form-group'>
+							<label for='category'>Visibility:</label>
+							<div class='checkbox mt-1'>
+								<label>
+									<input type='checkbox' name='published' id='published' />
+									Published
+								</label>
+							</div>
+						</div>
+					</div>
+				</div>
+			</fieldset>
+			<hr style='border-top: 0.3px solid white;margin: 0;' />
+			<br />
+			<input
+				type='submit'
+				class='btn btn-primary pull-right'
+				value='Add Post'
+			/>
+			<br />
+		</form>
+	</div>
+</div>

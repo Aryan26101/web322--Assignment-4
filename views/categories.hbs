@@ -1,0 +1,31 @@
+<h1 class="m-5 text-center ">
+    Categories
+</h1>
+{{#if categories}}
+
+	<table class='table'>
+		<thead>
+			<th class='text-center'>
+				Category Id
+			</th>
+			<th>
+				Category Name
+			</th>
+		</thead>
+		{{#each categories}}
+			<tr>
+				<td scope='row' class='text-center'>
+					<a href='/posts?category={{id}}'>{{id}}</a>
+				</td>
+				<td>
+					{{category}}
+				</td>
+			</tr>
+		{{/each}}
+	</table>
+
+{{else}}
+	<div class='alert alert-danger' role='alert'>
+		No categories found.
+	</div>
+{{/if}}

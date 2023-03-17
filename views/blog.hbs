@@ -1,0 +1,82 @@
+<nav class='navbar navbar-expand-lg mt-5'>
+	<div class='container-fluid'>
+		<div
+			class='collapse navbar-collapse d-flex justify-content-center'
+			id='navbarNavDropdown'
+		>
+			<ul class='nav navbar-nav d-flex justify-content-center'>
+
+				{{#each categories}}
+					<li class='nav-item dropdown'>
+						<a
+							href='/categories/{{id}}'
+							class='nav-link dropdown-toggle'
+							role='button'
+							data-bs-toggle='dropdown'
+							aria-expanded='false'
+						>{{category}}</a>
+						<ul class='dropdown-menu'>
+							<li>
+								<a class='dropdown-item' href='/blog?category={{id}}'>View Category</a>
+							</li>
+							{{#each posts}}
+								<li>
+									<a class='dropdown-item' href='/blog/{{id}}'>{{title}}</a>
+								</li>
+							{{/each}}
+						</ul>
+					</li>
+
+				{{/each}}
+
+			</ul>
+		</div>
+	</div>
+
+</nav>
+{{#if post}}
+<section>
+	<div class='container'>
+		<div class='row'>
+			<div class='col-md-12'>
+				{{#if post}}
+					<h1>{{post.title}}</h1>
+					<img
+						src='{{post.featureImage}}'
+						alt='feature Image'
+						style='width:100%'
+					/>
+					<br /><br />
+					{{#safeHTML post.body}}{{/safeHTML}}
+					<br /><br />
+					<strong>Category:</strong>
+					{{post.category}}<br />
+					<strong>Last Updated:</strong>
+					{{post.postDate}}
+				{{else}}
+					<div class='col-md-12 text-center'>
+						<h2>{{message}}</h2>
+					</div>
+				{{/if}}
+			</div>
+		</div>
+		<nav aria-label='Page navigation example'>
+			<ul class='pagination d-flex justify-content-center'>
+				
+				{{#each currentPosts}}
+                    <li class='page-item'  data-bs-toggle="tooltip" data-bs-title="{{title}}">
+                        <a class='page-link' href='/post/{{id}}?category={{currentCategory}}'>{{index}}</a>
+                    </li>
+                {{/each}}
+				
+			</ul>
+		</nav>
+	</div>
+</section>
+{{else}}
+<div class="alert alert-danger">
+Post not found.
+</div>
+    
+{{/if}}
+
