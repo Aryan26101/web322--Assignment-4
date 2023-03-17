@@ -7,7 +7,7 @@
 *
 *  Cyclic Web App URL: 
 *
-*  GitHub Repository URL: 
+*  GitHub Repository URL: https://github.com/Aryan26101/web322--Assignment-4
 *
 ********************************************************************************/ 
 var HTTP_PORT = process.env.PORT || 8080;
@@ -64,10 +64,10 @@ app.engine(
 );
 app.set('view engine', '.hbs');
 cloudinary.config({
-	cloud_name: 'dsr2a9uyf',
-	api_key: '754293634516759',
-	api_secret: 'rmMmc3pKrXA5WjOoKnI-Bc-3fnk',
-	secure: true,
+	cloud_name: "dyh9n1mmv",
+    api_key: "882875188383543",
+    api_secret: "-GG2N_SVOZ-tEmNOJMMxJjsSfY8",
+    secure: true,
 });
 const upload = multer();
 app.get('/', (req, res) => {
